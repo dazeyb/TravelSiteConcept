@@ -4,8 +4,17 @@
     margin: none;
 }
 
+
+a, a:hover {
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:hover {
+    color: rgb(204, 205, 207);
+}
 .navbar {
-    background-color: dodgerblue;
+    background-color: #01497C;
+    color: whitesmoke;
 }
 
 .div_carousel {
@@ -14,11 +23,21 @@
 }
 
 .div_about-header {
-    background-color:darkcyan;
+    padding: 15px;
+    background-color: rgb(225, 227, 233);
     display: flex;
     justify-content: center;
+    color: #495057;
 }
 
 .div_about-textarea {
+    padding: 15px;
     display: inline-flex;
+    background-color: whitesmoke;
+    color: #495057;
+}
+
+.section_textarea {
+    padding: 15px;
+    font-size: 15px;
 }
