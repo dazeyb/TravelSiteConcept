@@ -4,6 +4,9 @@
     margin: none;
 }
 
+body {
+    background-color: whitesmoke;
+}
 
 a, a:hover {
     text-decoration: none;
@@ -29,18 +32,23 @@ a:hover {
 
 
 .div_carousel {
-    background-color: burlywood;
+    background-color: whitesmoke;
     height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .div_about-header {
     padding: 15px;
     background-color: rgb(225, 227, 233);
     display: flex;
+    margin-left: 25%;
     justify-content: center;
     color: #495057;
-    border-bottom: 5px solid rgb(233, 234, 237);
     font-weight: 300;
+    width: 50%;
+    border-radius: 10px;
 }
 
 h4 {
@@ -48,19 +56,29 @@ h4 {
 }
 
 .div_about-textarea {
-    padding: 15px;
+    padding: 25px;
     display: inline-flex;
+    margin: 0 auto;
     gap: 10px;
     background-color: whitesmoke;
     color: #495057;
-    border-top: 5px solid rgb(240, 240, 240)
 }
 
 .section_textarea {
     padding: 15px;
-    font-size: 15px;
-    height: 85%;
+    font-size: 12px;
+    height: auto;
     width: 80%;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(225, 227, 233);
+    border-radius: 10px;
+}
+
+.section_textarea-header {
+    font-size: 18px
+}
+
+.img_sydney-snow {
+    height: 350px;
+    width: auto;
     border-radius: 10px;
 }
