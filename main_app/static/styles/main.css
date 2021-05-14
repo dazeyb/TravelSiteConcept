@@ -4,21 +4,81 @@
     margin: none;
 }
 
-.navbar {
-    background-color: dodgerblue;
+body {
+    background-color: whitesmoke;
 }
 
+a, a:hover {
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:hover {
+    color: rgb(204, 205, 207);
+}
+.navbar {
+    background-color: #01497C;
+    color: whitesmoke;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
 .div_carousel {
-    background-color: burlywood;
+    background-color: whitesmoke;
     height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .div_about-header {
-    background-color:darkcyan;
+    padding: 15px;
+    background-color: rgb(225, 227, 233);
     display: flex;
+    margin-left: 25%;
     justify-content: center;
+    color: #495057;
+    font-weight: 300;
+    width: 50%;
+    border-radius: 10px;
+}
+
+h4 {
+    font-weight: 400;
 }
 
 .div_about-textarea {
+    padding: 25px;
     display: inline-flex;
+    margin: 0 auto;
+    gap: 10px;
+    background-color: whitesmoke;
+    color: #495057;
+}
+
+.section_textarea {
+    padding: 15px;
+    font-size: 12px;
+    height: auto;
+    width: 80%;
+    background-color: rgb(225, 227, 233);
+    border-radius: 10px;
+}
+
+.section_textarea-header {
+    font-size: 18px
+}
+
+.img_sydney-snow {
+    height: 350px;
+    width: auto;
+    border-radius: 10px;
 }
