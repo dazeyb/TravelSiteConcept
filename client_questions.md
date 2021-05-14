@@ -28,7 +28,7 @@ Header: just a color? design? photo?
 	Photo connected to header or totally separate? (persists across pages)
     Logo?
 
-Color Pallete: Example websites
+Color Palette: Example websites
 
 Fonts 
 
