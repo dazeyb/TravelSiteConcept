@@ -17,6 +17,17 @@ a:hover {
     color: whitesmoke;
 }
 
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
 .div_carousel {
     background-color: burlywood;
     height: 400px;
@@ -28,16 +39,28 @@ a:hover {
     display: flex;
     justify-content: center;
     color: #495057;
+    border-bottom: 5px solid rgb(233, 234, 237);
+    font-weight: 300;
+}
+
+h4 {
+    font-weight: 400;
 }
 
 .div_about-textarea {
     padding: 15px;
     display: inline-flex;
+    gap: 10px;
     background-color: whitesmoke;
     color: #495057;
+    border-top: 5px solid rgb(240, 240, 240)
 }
 
 .section_textarea {
     padding: 15px;
     font-size: 15px;
+    height: 85%;
+    width: 80%;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
 }
