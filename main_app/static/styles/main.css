@@ -5,24 +5,29 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: rgb(234, 236, 233);
 }
 
 a, a:hover {
     text-decoration: none;
     color: whitesmoke;
+    font-weight:500;
 }
 a:hover {
-    color: rgb(204, 205, 207);
+    color: #fb8500;
 }
+
+
+
 .navbar {
-    background-color: #01497C;
+    background-color: #01697c;
     color: whitesmoke;
 }
 
 .logo {
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
+    color: #e9c46a
 }
 
 .nav-link {
@@ -37,17 +42,19 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(https://wallpaperaccess.com/full/249854.jpg);
+    object-fit:scale-down;
 }
 
 .div_about-header {
     padding: 15px;
-    background-color: rgb(225, 227, 233);
+    background-color: rgb(234, 236, 233);
     display: flex;
-    margin-left: 25%;
+    margin-left: 32%;
     justify-content: center;
     color: #495057;
     font-weight: 300;
-    width: 50%;
+    width: 36%;
     border-radius: 10px;
 }
 
@@ -55,14 +62,6 @@ h4 {
     font-weight: 400;
 }
 
-.div_about-textarea {
-    padding: 25px;
-    display: inline-flex;
-    margin: 0 auto;
-    gap: 10px;
-    background-color: whitesmoke;
-    color: #495057;
-}
 
 .section_textarea {
     padding: 15px;
@@ -73,12 +72,23 @@ h4 {
     border-radius: 10px;
 }
 
+.div_about-textarea {
+    padding: 25px;
+    display: inline-flex;
+    margin-left: 13%;
+    gap: 25px;
+    width: 75%;
+    background-color: #01697c;
+    color: #495057;
+    border-radius: 10px;
+}
+
 .section_textarea-header {
     font-size: 18px
 }
 
 .img_sydney-snow {
-    height: 350px;
+    height: 500px;
     width: auto;
-    border-radius: 10px;
+    border-radius: 5px;
 }
