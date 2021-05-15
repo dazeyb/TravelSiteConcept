@@ -26,6 +26,26 @@ JS
 
 //modal-wrapper is id of div, modal is the class
 
+views file
+import UserCreationForm
+
+class Signup(View):
+	def get(self, request):
+		form = UserCreationForm()
+		context = {"form": form}
+		return render(request, "signup.html", context)
+
+	def post(self, request):
+		form = UserCreationForm(request.POST)
+		if form.is_valid():
+			user = form.save()
+			login(request, user)
+			return redirect("home")
+		else:
+			context = {"form": form}
+			return render(request, "signup.html", context)
+
+
 var modal = document.getElementById('modal-wrapper');
 window.onclick = function(event) {
     if (event.target == modal) {
