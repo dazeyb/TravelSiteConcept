@@ -4,21 +4,91 @@
     margin: none;
 }
 
-.navbar {
-    background-color: dodgerblue;
+body {
+    background-color: rgb(234, 236, 233);
 }
 
+a, a:hover {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight:500;
+}
+a:hover {
+    color: #fb8500;
+}
+
+
+
+.navbar {
+    background-color: #01697c;
+    color: whitesmoke;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #e9c46a
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
 .div_carousel {
-    background-color: burlywood;
+    background-color: whitesmoke;
     height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://wallpaperaccess.com/full/249854.jpg);
+    object-fit:scale-down;
 }
 
 .div_about-header {
-    background-color:darkcyan;
+    padding: 15px;
+    background-color: rgb(234, 236, 233);
     display: flex;
+    margin-left: 32%;
     justify-content: center;
+    color: #495057;
+    font-weight: 300;
+    width: 36%;
+    border-radius: 10px;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+
+.section_textarea {
+    padding: 15px;
+    font-size: 12px;
+    height: auto;
+    width: 80%;
+    background-color: rgb(225, 227, 233);
+    border-radius: 10px;
 }
 
 .div_about-textarea {
+    padding: 25px;
     display: inline-flex;
+    margin-left: 13%;
+    gap: 25px;
+    width: 75%;
+    background-color: #01697c;
+    color: #495057;
+    border-radius: 10px;
+}
+
+.section_textarea-header {
+    font-size: 18px
+}
+
+.img_sydney-snow {
+    height: 500px;
+    width: auto;
+    border-radius: 5px;
 }
