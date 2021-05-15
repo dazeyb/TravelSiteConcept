@@ -34,5 +34,6 @@ class Signup(View):
             return redirect("home")
         else:
             context = {"form": form}
+            print(form.errors, "Failed to sign-up user")
             return render(request, "signup.html", context)
 
