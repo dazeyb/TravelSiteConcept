@@ -9,8 +9,9 @@ from django.http import HttpResponse
 # auth imports
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
+
+# from django.contrib.auth.decorators import login_required
+# from django.utils.decorators import method_decorator
 
 
 # Create your views here.
