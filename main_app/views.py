@@ -41,4 +41,9 @@ class Signup(View):
 
 
 class PubProfile(TemplateView):
-    template_name = "pubprofile.html"
+    template_name = "pub_profile.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["posts"] = Post.objects.all()
+        return context

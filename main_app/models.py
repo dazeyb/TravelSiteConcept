@@ -12,7 +12,7 @@ class Post(Model):
     title = CharField(max_length=100)
     city = CharField(max_length=100)
     body = TextField(max_length=500)
-    img = CharField(max_length=100)
+    img = CharField(max_length=600)
     create_at = DateTimeField(auto_now_add=True)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
