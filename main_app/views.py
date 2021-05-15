@@ -1,3 +1,4 @@
+from main_app.models import Post
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
@@ -20,6 +21,7 @@ from django.contrib.auth.forms import UserCreationForm
 class Home(TemplateView):
     template_name = "home.html"
 
+
 class Signup(View):
     def get(self, request):
         form = UserCreationForm()
@@ -37,3 +39,6 @@ class Signup(View):
             print(form.errors, "Failed to sign-up user")
             return render(request, "signup.html", context)
 
+
+class PubProfile(TemplateView):
+    template_name = "pubprofile.html"
