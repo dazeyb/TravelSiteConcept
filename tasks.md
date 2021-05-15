@@ -19,3 +19,7 @@ Database
 Profile page
     (shows posts they've made, date joined, username)
 
+
+
+Feature Creep: 
+    Make navbar responsive to login/logout status
