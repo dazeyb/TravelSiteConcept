@@ -32,29 +32,10 @@
             </a>
         </section>
         <section class="section_panel-right">
-            <div class="div_userinfo">
-                <div class="div_user-text-info">
-                    <h2 class="p_home-city">London</h2>
-                    <p class="p_home-country">United Kingdom</p>
-                    <p class="p_username">Username</p>
-                    <p class="p_member-since">Member Since: 5/15/2021</p>
-                    </div>
-                <div class="div_user-city-photo">
-                    <img src="" class="img_user-city" alt="">
-                </div>
-            </div>
-            <div class="container-fluid div_userposts">
-                <h2>Posts</h2>
-            {% for post in posts%}
-                <a href="{% url 'post_detail' post.pk %}" class="card a_userposts-card">
-                    <img src="{{post.img}}" class="card-img-top" alt="">
-                        <div>
-                        <h6 class="card-title">{{post.title}}</h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugit, ab sapiente</p>
-                        </div>
-                </a>                
-                
-                {% endfor %}
+            <div class="div_post-detail">
+                <img class="img_post-detail" src="{{ post.img }}" alt="">
+                <h2 class="h2_post-detail-title">{{ post.title }}</h2>
+                <p class="p_post-detail-body">{{ post.body }}</p>
             </div>
         </section>
 
