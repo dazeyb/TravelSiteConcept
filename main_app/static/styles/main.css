@@ -108,7 +108,9 @@ main {
     align-content: center;
 }
 .p_cities-header {
-    margin: 30px;
+    margin: 30px 30px 0px 30px;
+    font-size: 40px;
+    font-weight: 600;
 }
 .div_city-link {
     display: flex;
@@ -118,6 +120,7 @@ main {
     margin: 30px;
     border: 2px solid black;
     border-radius: 25px;
+    color: #495057;
 }
 
 .img_city-link {
