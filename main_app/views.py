@@ -41,9 +41,9 @@ class Signup(View):
             return render(request, "signup.html", context)
 
 
+
 def showslides(request):
     return render(request, 'home.html')
-
 
 class PubProfile(TemplateView):
     template_name = "pub_profile.html"
@@ -52,6 +52,7 @@ class PubProfile(TemplateView):
         context = super().get_context_data(**kwargs)
         context["posts"] = Post.objects.all()
         return context
+
 
 
 class PostDetail(DetailView):
