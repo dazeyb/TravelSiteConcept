@@ -8,6 +8,9 @@ from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponse
 
+# forms
+from .forms import SignUpForm
+
 # auth imports
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -22,10 +25,28 @@ from django.contrib.auth.forms import UserCreationForm
 class Home(TemplateView):
     template_name = "home.html"
 
+# This functions but doesn't have extra fields we need, keeping as a backup
+
+# class Signup(View):
+#     def get(self, request):
+#         form = UserCreationForm()
+#         context = {"form": form}
+#         return render(request, "signup.html", context)
+
+#     def post(self, request):
+#         form = UserCreationForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             login(request, user)
+#             return redirect("login")
+#         else:
+#             context = {"form": form}
+#             print(form.errors, "Failed to sign-up user")
+#             return render(request, "signup.html", context)
 
 class Signup(View):
     def get(self, request):
-        form = UserCreationForm()
+        form = SignUpForm()
         context = {"form": form}
         return render(request, "signup.html", context)
 
