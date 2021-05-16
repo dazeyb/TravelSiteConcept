@@ -1,3 +1,4 @@
+from typing import ContextManager
 from main_app.models import Post
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -39,6 +40,7 @@ class Signup(View):
             print(form.errors, "Failed to sign-up user")
             return render(request, "signup.html", context)
 
+
 def showslides(request):
     return render(request, 'home.html')
 
@@ -50,3 +52,8 @@ class PubProfile(TemplateView):
         context = super().get_context_data(**kwargs)
         context["posts"] = Post.objects.all()
         return context
+
+
+class PostDetail(DetailView):
+    model = Post
+    template_name = "post_detail.html"
