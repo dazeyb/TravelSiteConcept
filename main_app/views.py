@@ -8,8 +8,8 @@ from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponse
 
-# forms
-from .forms import SignUpForm
+# forms, commenting out for migrations
+# from .forms import SignUpForm
 
 # auth imports
 from django.contrib.auth import login
@@ -46,7 +46,10 @@ class Home(TemplateView):
 
 class Signup(View):
     def get(self, request):
-        form = SignUpForm()
+
+# Set back to usercreationform for migrations
+        form = UserCreationForm
+        # form = SignUpForm()
         context = {"form": form}
         return render(request, "signup.html", context)
 
