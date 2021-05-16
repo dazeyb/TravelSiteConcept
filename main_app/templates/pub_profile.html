@@ -16,16 +16,13 @@
                 user info
             </div>
             <div class="container-fluid div_userposts">
+                <h2>Posts</h2>
             {% for post in posts%}
-                <a href="" class="a_userposts-card">
-                <div class="card">
+                <a href="" class="card a_userposts-card">
                     <img src="{{post.img}}" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">{{post.title}}</h5>
-                        <p class="card-text">{{post.body}}</p>
-                    </div>
-                </div>                
-                </a>
+                        <h6 class="card-title">{{post.title}}</h6>
+                </a>                
+                
                 {% endfor %}
             </div>
         </section>
