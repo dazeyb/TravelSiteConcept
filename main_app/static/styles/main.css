@@ -151,6 +151,27 @@ main {
 .div_userinfo {
     background-color: khaki;
     height: 20%;
+    display: flex;
+}
+
+.div_user-text-info {
+    width: 45%;
+    padding: 15px;
+}
+
+.p_member-since {
+    font-size: small;
+}
+.div_user-city-photo {
+    width: 55%;
+    background-color:coral;
+    display: flex;
+    justify-content: center;
+}
+
+.img_user-city {
+    width: 90%;
+    height: 80%;
 }
 
 .div_userposts {
