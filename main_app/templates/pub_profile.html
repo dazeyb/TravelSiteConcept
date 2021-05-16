@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<body>
+
+    <main>
+        <section class="section_panel-left">
+            <p class="p_cities-header">Cities</p>
+            <div class="div_city-link">city link</div>
+            <div class="div_city-link">city link</div>
+            <div class="div_city-link">city link</div>
+            <div class="div_city-link">city link</div>
+        </section>
+        <section class="section_panel-right">
+            <div class="div_userinfo">
+                user info
+            </div>
+            <div class="container-fluid div_userposts">
+            {% for post in posts%}
+                <a href="" class="a_userposts-card">
+                <div class="card">
+                    <img src="{{post.img}}" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">{{post.body}}</p>
+                    </div>
+                </div>                
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
+
+{% endblock %}

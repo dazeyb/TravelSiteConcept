@@ -121,9 +121,28 @@ main {
 .section_panel-right {
     background-color: pink;
     width: 60%;
+    height: 100%;
 }
 
 .div_userinfo {
     background-color: khaki;
     height: 40%;
+}
+
+.div_userposts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.a_userposts-card {
+    height: 100px;
+    width: 75%;
+    object-fit: contain;
+}
+
+.card-img-top {
+    height: 75px;
+    width: 120px;
 }
