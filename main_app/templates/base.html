@@ -16,7 +16,9 @@
 </head>
 <body>
 
-        {% comment %} This code will ideally alter the navbar depending on if a user is ogged in or not {% endcomment %}
+
+
+    {% comment %} This code will ideally alter the navbar depending on if a user is ogged in or not {% endcomment %}
 
     {% comment %} {% if user.is_authenticicated %}
         <a href="{% url 'home' %}">Home</a>
@@ -30,7 +32,34 @@
         <a href="{% url 'login' %}">Login</a>
     {% endif %} {% endcomment %}
 
+
+
     <div class="navbar">
+        <span class="logo">
+            Wayfarer
+        </span>
+        <ul class="nav justify-content-end">
+            
+                {% if user.is_authenticicated %}
+
+                    <li class="nav-item"> <a href="{% url 'home' %}">Home</a> </li>
+                    <li class="nav-item"> <a href="{% url 'profile' %}">Profile</a> </li>
+                    <li class="nav-item"> <a href="{% url 'logout' %}">Logout</a> </li>
+
+                {% else %}
+
+                    <li class="nav-item"> <a href="{% url 'home' %}">Home</a> </li>
+                    <li class="nav-item"> <a href="{% url 'signup' %}">Sign Up</a> </li>
+                    <li class="nav-item"> <a href="{% url 'login' %}">Login</a> </li>
+                    
+                {% endif %}
+
+        </ul>
+    </div>
+
+    {% comment %} This is the old code that isn't a dynamic navbar, we can revert to this if it breaks {% endcomment %}
+
+    {% comment %} <div class="navbar">
         <span class="logo">
             Wayfarer
         </span>
@@ -42,7 +71,9 @@
                 <a class="nav-link" href="#">Log In</a>
             </li>
         </ul>
-    </div>
+    </div> {% endcomment %}
+
+
 
     {% block content %}
     {% endblock %}
