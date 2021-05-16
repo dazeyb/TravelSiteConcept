@@ -15,9 +15,9 @@
             <div class="div_userinfo">
                 user info
             </div>
-            <section class="div_userposts">
+            <div class="container-fluid div_userposts">
             {% for post in posts%}
-                <a href="">
+                <a href="" class="a_userposts-card">
                 <div class="card">
                     <img src="{{post.img}}" class="card-img-top" alt="">
                     <div class="card-body">
@@ -27,7 +27,7 @@
                 </div>                
                 </a>
                 {% endfor %}
-            </section>
+            </div>
         </section>
 
 
