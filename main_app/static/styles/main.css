@@ -93,7 +93,7 @@ h4 {
     border-radius: 5px;
 }
 
-/* Public profile/ Post Show style */
+/* Public profile style */
 
 
 main {
@@ -111,13 +111,27 @@ main {
     margin: 30px;
 }
 .div_city-link {
+    display: flex;
     width: 85%;
-    height: 100px;
+    height: 125px;
     padding: 20px;
     margin: 30px;
     border: 2px solid black;
     border-radius: 25px;
 }
+
+.img_city-link {
+    height: 75px;
+    width: 120px;
+    border-radius: 1px;
+}
+
+.p_city-link {
+    padding: 15px;
+    font-size: 25px;
+    align-self: center;
+}
+
 
 .section_panel-right {
     background-color: pink;
