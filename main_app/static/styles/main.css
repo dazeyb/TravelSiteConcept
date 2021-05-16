@@ -112,6 +112,13 @@ main {
     font-size: 40px;
     font-weight: 600;
 }
+
+.a_city-link {
+    height: 125px;
+    width:85%;
+    margin-bottom: 40px;
+}
+
 .div_city-link {
     display: flex;
     width: 85%;
@@ -143,7 +150,7 @@ main {
 
 .div_userinfo {
     background-color: khaki;
-    height: 35%;
+    height: 20%;
 }
 
 .div_userposts {
