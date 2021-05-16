@@ -46,7 +46,7 @@ def showslides(request):
     return render(request, 'home.html')
 
 class PubProfile(TemplateView):
-    template_name = "pub_profile.html"
+    template_name = "profile.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
