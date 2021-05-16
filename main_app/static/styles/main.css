@@ -218,3 +218,26 @@ main {
     display: inline-block;
     margin-left: 5px;
 }
+
+/* Post Detail Page Styling */
+
+.div_post-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.img_post-detail {
+    align-self: center;
+    width: 85%;
+    height: auto;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.h2_post-detail-title {
+    margin: 15px 50px 25px 50px;
+}
+
+.p_post-detail-body {
+    margin: 15px 50px 25px 50px;
+}
