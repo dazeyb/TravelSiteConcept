@@ -6,8 +6,8 @@
 <form method="post" action="{% url 'signup' %}">
 
     {% csrf_token %}{{form.as_p}}
-    <input type="submit" value="Sign Up"> />
-    <input type="hidden" value="{{ next }}" name="next">
+    <input type="submit" value="Sign Up"/>
+    <input type="hidden" value="{{ next }}" name="next"/>
 
 </form>
 
