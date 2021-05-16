@@ -34,7 +34,7 @@ class Signup(View):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("home")
+            return redirect("login")
         else:
             context = {"form": form}
             print(form.errors, "Failed to sign-up user")
