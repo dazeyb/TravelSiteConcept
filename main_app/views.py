@@ -1,4 +1,4 @@
-from main_app.forms import SignUpForm
+# from main_app.forms import SignUpForm
 from typing import ContextManager
 from main_app.models import Post
 from django.shortcuts import render, redirect
