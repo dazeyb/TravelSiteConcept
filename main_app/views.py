@@ -11,7 +11,7 @@ from django.http import HttpResponse
 
 # forms
 # from .forms import SignUpForm
-from .forms import SignUpForm, UserProfileForm
+from .forms import SignUpForm, UserProfileForm, LogInForm
 
 # auth imports
 from django.contrib.auth import authenticate, login
@@ -27,6 +27,39 @@ from django.contrib.auth.forms import UserCreationForm
 class Home(TemplateView):
     template_name = "home.html"
 
+    def get(self, request):
+        form = SignUpForm()
+        profile_form = UserProfileForm()
+        log_in = LogInForm()
+        context = {"form": form,
+                   "profile_form": profile_form, "log_in": log_in}
+        return render(request, "home.html", context)
+
+    def post(self, request):
+        form = SignUpForm(request.POST)
+        profile_form = UserProfileForm(request.POST)
+
+        if form.is_valid() and profile_form.is_valid():
+            user = form.save()
+            profile = profile_form.save(commit=False)
+            profile.user = user
+
+            profile.save()
+
+            login(request, user)
+            return redirect("accounts/profile")
+        else:
+            return redirect("home.html")
+
+    def post(self, request):
+        log_in = LogInForm(request.POST)
+
+        if log_in.is_valid():
+            user = log_in.save()
+            login(request, user)
+            return redirect("accounts/profile")
+        else:
+            return redirect("home")
 # This functions but doesn't have extra fields we need, keeping as a backup
 
 
@@ -72,7 +105,7 @@ class PostDetail(DetailView):
     model = Post
     template_name = "post_detail.html"
 
- # original form ------
+# original form ------
 # class Signup(View):
 #     def get(self, request):
 #         form = SignUpForm()
