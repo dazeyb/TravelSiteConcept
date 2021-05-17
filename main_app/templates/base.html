@@ -54,8 +54,10 @@
                 {% else %}
 
                     <li class="nav-item"> <a class="nav-link" href="{% url 'home' %}">Home</a> </li>
-                   
-                    <li class="nav-item"> <a class="nav-link" href="{% url 'signup' %}">Sign Up</a> </li>
+                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    sign up
+</button>
+                    {% comment %} <li class="nav-item"> <a class="nav-link" href="{% url 'signup' %}">Sign Up</a> </li> {% endcomment %}
                     <li class="nav-item"> <a class="nav-link" href="{% url 'login' %}">Login</a> </li>
                     
                 {% endif %}
@@ -65,7 +67,7 @@
 
     {% comment %} This is the old code that isn't a dynamic navbar, we can revert to this if it breaks {% endcomment %}
 
-    {% comment %} <div class="navbar">
+     {% comment %} <div class="navbar">
         <span class="logo">
             Wayfarer
         </span>
@@ -77,8 +79,9 @@
                 <a class="nav-link" href="#">Log In</a>
             </li>
         </ul>
-    </div> {% endcomment %}
- {% comment %} <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    </div>  {% endcomment %}
+    <form method="POST">
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -91,24 +94,25 @@
               <div class="modal-body">
                  {{ form.errors }}
 
-                    <form method="POST" action="{% url 'home' %}">
-                        Do i work at all?
+                    {% comment %} <form method="POST" action="{% url 'home' %}">
+                        Do i work at all? {% endcomment %}
                         {% csrf_token %}
                         {{ form.as_p }}
                         {{ profile_form.as_p }}
-                        <input type="submit" value="Sign Up"/>
-                        <input type="hidden" value="{{ next }}" name="next"/>
+                        {% comment %} <input type="submit" value="Sign Up"/>
+                        <input type="hidden" value="{{ next }}" name="next"/> {% endcomment %}
 
-                    </form>
+                    
               </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                
+                  <button type="submit" class="btn btn-primary">Register</button>
               </div>
           </div>
       </div>
-  </div> {% endcomment %}
-
+  </div> 
+</form>
 <script src="/main.js/"></script>
     {% block content %}
     {% endblock %}
