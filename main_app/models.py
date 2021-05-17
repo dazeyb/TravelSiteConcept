@@ -29,6 +29,8 @@ class Post(Model):
 
 class UserProfile(Model):
     # On delete CASCADE deletes all user info when user is deleted
+    # Adding user to this like a foreign
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     current_city = models.CharField(max_length=400)
