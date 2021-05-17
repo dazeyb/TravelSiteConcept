@@ -11,7 +11,7 @@ from django.http import HttpResponse
 
 # forms
 # from .forms import SignUpForm
-from .forms import SignUpForm, UserProfileForm
+from .forms import SignUpForm, UserProfileForm, LogInForm
 
 # auth imports
 from django.contrib.auth import authenticate, login
@@ -30,7 +30,9 @@ class Home(TemplateView):
     def get(self, request):
         form = SignUpForm()
         profile_form = UserProfileForm()
-        context = {"form": form, "profile_form": profile_form}
+        log_in = LogInForm()
+        context = {"form": form,
+                   "profile_form": profile_form, "log_in": log_in}
         return render(request, "home.html", context)
 
     def post(self, request):
@@ -45,9 +47,19 @@ class Home(TemplateView):
             profile.save()
 
             login(request, user)
-            return redirect("login")
+            return redirect("accounts/profile")
         else:
             return redirect("home.html")
+
+    def post(self, request):
+        log_in = LogInForm(request.POST)
+
+        if log_in.is_valid():
+            user = log_in.save()
+            login(request, user)
+            return redirect("accounts/profile")
+        else:
+            return redirect("home")
 # This functions but doesn't have extra fields we need, keeping as a backup
 
 
