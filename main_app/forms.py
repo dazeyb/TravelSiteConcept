@@ -6,13 +6,11 @@ from .models import UserProfile
 
 # Extending this so we have more fields in the signup page
 class SignUpForm(UserCreationForm):
+    # username = forms.CharField(max_length=100, help_text='')
 
     class Meta:
         model = User
         fields = ('username', 'password1', 'password2')
-
-        help_text = "Nothing"
-
 
 
 class UserProfileForm(forms.ModelForm):         # 5:06 
