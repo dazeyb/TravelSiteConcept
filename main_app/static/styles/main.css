@@ -6,6 +6,11 @@
 
 }
 
+input {
+    border-radius: 5px;
+    outline: none;
+}
+
 body {
     background-color: rgb(234, 236, 233);
     color: #495057;
@@ -20,10 +25,13 @@ a:hover {
     color: rgb(243, 132, 76);
 }
 
+span {
+    color: #495057;
+}
 
 .navbar {
     background-color: rgb(56, 87, 112);
-    color: rgb(234, 236, 233);;
+    color: rgb(234, 236, 233);
     margin-bottom: 35px;
     height: 100px;
 }
@@ -39,20 +47,27 @@ a:hover {
     font-weight: 300;
 }
 
-
-.div_carousel {
-    background-color: whitesmoke;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://wallpaperaccess.com/full/249854.jpg);
-    object-fit:scale-down;
+.modal-header {
+    background-color: rgb(56, 87, 112);
 }
 
-.carousel-inner img {
-    width: auto;
-    height: 400px;
+.modal-title {
+    color: #f3d48b;
+}
+
+.btn_close-modal {
+    background-color: #495057;
+    color: whitesmoke;
+
+}
+
+.btn_submit {
+    background-color: rgb(56, 87, 112);
+    color:#f3d48b;
+}
+
+.carousel, .carousel-inner {
+    height: 500px;
 }
 
 .div_about-header {
@@ -121,6 +136,7 @@ main {
     margin: 30px 30px 0px 30px;
     font-size: 40px;
     font-weight: 600;
+    margin-left: 14%;
     color: rgb(234, 236, 233);
 }
 
@@ -128,13 +144,16 @@ main {
     height: 125px;
     width:85%;
     margin-bottom: 40px;
+    
 }
 
 .div_city-link {
     display: flex;
     height: 125px;
     padding: 20px;
-    margin: 0;
+    margin: 30px;
+    margin-left: 16%;
+    border: 2px solid #495057;
     border-radius: 25px;
     color: #495057;
     background-color: rgb(234, 236, 233);
@@ -146,14 +165,17 @@ main {
 
 .img_city-link {
     height: 75px;
-    width: 120px;
+    width: 60%;
     border-radius: 1px;
+    position: relative;
 }
 
+
 .p_city-link {
-    padding: 15px;
+    
     font-size: 25px;
-    align-self: center;
+    margin-left: -20%;
+    
 }
 
 
