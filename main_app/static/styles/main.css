@@ -6,6 +6,11 @@
 
 }
 
+input {
+    border-radius: 5px;
+    outline: none;
+}
+
 body {
     background-color: rgb(234, 236, 233);
     color: #495057;
@@ -23,7 +28,7 @@ a:hover {
 
 .navbar {
     background-color: rgb(56, 87, 112);
-    color: rgb(234, 236, 233);;
+    color: rgb(234, 236, 233);
     margin-bottom: 35px;
     height: 100px;
 }
@@ -39,6 +44,24 @@ a:hover {
     font-weight: 300;
 }
 
+.modal-header {
+    background-color: rgb(56, 87, 112);
+}
+
+.modal-title {
+    color: #f3d48b;
+}
+
+.btn_close-modal {
+    background-color: #495057;
+    color: whitesmoke;
+
+}
+
+.btn_submit {
+    background-color: rgb(56, 87, 112);
+    color:#f3d48b;
+}
 
 .div_carousel {
     background-color: whitesmoke;
