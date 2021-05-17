@@ -25,6 +25,9 @@ a:hover {
     color: rgb(243, 132, 76);
 }
 
+span {
+    color: #495057;
+}
 
 .navbar {
     background-color: rgb(56, 87, 112);
