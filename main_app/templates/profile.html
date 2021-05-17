@@ -43,7 +43,22 @@
 
 
                 <div class="div_user-city-photo">
-                    <img src="" class="img_user-city" alt="">
+
+                        {% if user.userprofile.current_city == 'London' %}
+                            <img src="https://www.chatelaine.com/wp-content/uploads/2016/06/london-uk-travel.png" class="img_user-city" alt="">
+                            <img src="{{ 'static/images/Img1.jpeg' }}" alt="">
+                
+                        {% elif user.userprofile.current_city == 'Sydney' %}
+                            <img src="https://blog.sportslanguage.com/wp-content/uploads/2020/08/opera.jpg" class="img_user-city" alt="">
+                        
+                        {% elif user.userprofile.current_city == 'San Francisco' %}
+                            <img src="https://media.cntraveler.com/photos/5a99b5c520dfb6552425ecc8/master/w_1200,c_limit/san-francisco_GettyImages-600366840.jpg?mbid=social_retweet" class="img_user-city" alt="">
+                        
+                        {% else %}
+                            <img src="https://www.snappguides.co/wp-content/uploads/2018/03/spot1b_seattle-at-dusk.jpg" class="img_user-city" alt="">
+                
+                        {% endif %}
+
                 </div>
             </div>
             <div class="container-fluid div_userposts">
