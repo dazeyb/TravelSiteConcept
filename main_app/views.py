@@ -34,25 +34,24 @@ class Signup(View):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("home")
+            return redirect("profile")
         else:
             context = {"form": form}
             print(form.errors, "Failed to sign-up user")
             return render(request, "signup.html", context)
 
 
-
 def showslides(request):
     return render(request, 'home.html')
 
-class PubProfile(TemplateView):
+
+class Profile(TemplateView):
     template_name = "profile.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["posts"] = Post.objects.all()
         return context
-
 
 
 class PostDetail(DetailView):
