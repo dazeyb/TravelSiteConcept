@@ -10,7 +10,7 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username', 'password1', 'password2', 'email')
+        fields = ('username', 'password1', 'password2')
 
 
 class UserProfileForm(forms.ModelForm):         # 5:06
@@ -18,3 +18,10 @@ class UserProfileForm(forms.ModelForm):         # 5:06
     class Meta:
         model = UserProfile
         fields = ('current_city',)
+
+
+class LogInForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        fields = ('username', 'password')
