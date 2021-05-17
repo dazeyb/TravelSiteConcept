@@ -76,8 +76,8 @@ class Signup(View):
             return redirect("signup.html")
 
 
-def showslides(request):
-    return render(request, 'home.html')
+#def showslides(request):
+ #   return render(request, 'home.html')
 
 
 class Profile(TemplateView):
