@@ -2,7 +2,7 @@
 from django.urls import path
 
 # Add Profile below in future
-from .views import Signup, Home
+from .views import Signup, Home, EditProfile
 from . import views
 
 urlpatterns = [
@@ -15,9 +15,10 @@ urlpatterns = [
 
     path('', views.showslides),
 
+# Change routes to POSTS
     path('profile/<int:pk>/', views.PostDetail.as_view(), name="post_detail"),
 
-    path('edit_profile'/<str:pk>/', views.EditProfile.as_view(), name="edit_profile")
+    path('profile/edit_profile/', views.EditProfile.as_view(), name="edit_profile")
 
 ]
 

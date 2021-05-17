@@ -1,0 +1,70 @@
+{% extends 'base.html'%} {% block content%}
+
+<body>
+
+    <main>
+        <section class="section_panel-left">
+            <p class="p_cities-header">Cities</p>
+            <a href="" class="a_city-link">
+                 <div class="div_city-link">
+                    <img src="" alt="" class="img_city-link">
+                    <p class="p_city-link">London</p>
+                </div>
+            </a>
+            <a href="" class="a_city-link">
+                <div class="div_city-link">
+                    <img src="" alt="" class="img_city-link">
+                    <p class="p_city-link">Sydney</p>
+                </div>
+            </a>
+                <a href="" class="a_city-link">
+                <div class="div_city-link">
+                    <img src="" alt="" class="img_city-link">
+                    <p class="p_city-link">San Francisco</p>
+                </div>
+            </a>
+            <a href="" class="a_city-link">
+                 <div class="div_city-link">
+                    <img src="" alt="" class="img_city-link">
+                    <p class="p_city-link">Seattle</p>
+                </div>
+            </a>
+        </section>
+        <section class="section_panel-right">
+            <div class="div_userinfo">
+                <div class="div_user-text-info">
+
+
+                    <p class="p_username">{{ user.username }}</p>
+                    <h2 class="p_home-city">{{ user.userprofile.current_city }}</h2>
+                    <p class="p_member-since">Member Since: 5/15/2021</p>
+                    {% comment %} <li class="nav-item"> <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a> </li> {% endcomment %}
+                    
+                    <form method="POST" action="{% url 'edit_profile' %}">
+
+                        {% csrf_token %}
+                        {{ edit_form.as_p }}
+                        <input type="submit" value="Edit"/>
+                        <input type="hidden" value="{{ next }}" name="next"/>
+
+                    </form>
+
+                </div>
+
+                <div class="div_user-city-photo">
+                    <img src="" class="img_user-city" alt="">
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
+
+{% endblock %}
