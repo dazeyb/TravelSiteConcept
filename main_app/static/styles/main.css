@@ -63,19 +63,9 @@ a:hover {
     color:#f3d48b;
 }
 
-.div_carousel {
-    background-color: whitesmoke;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://wallpaperaccess.com/full/249854.jpg);
-    object-fit:scale-down;
-}
-
-.carousel-inner img {
-    width: auto;
-    height: 400px;
+.carousel-inner {
+    height: 30%;
+    object-fit: cover;
 }
 
 .div_about-header {
