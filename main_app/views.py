@@ -72,7 +72,7 @@ class PostDetail(DetailView):
     model = Post
     template_name = "post_detail.html"
 
- # original form ------
+# original form ------
 # class Signup(View):
 #     def get(self, request):
 #         form = SignUpForm()
