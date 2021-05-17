@@ -24,11 +24,10 @@ class Post(Model):
         ordering = ['create_at']
 
 
-
 # Extending User model
 # Working to extend User model so we have more fields that update into database
 
-class UserProfile(models.Model):
+class UserProfile(Model):
     # On delete CASCADE deletes all user info when user is deleted
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
