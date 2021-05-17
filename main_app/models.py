@@ -22,3 +22,18 @@ class Post(Model):
 
     class Meta:
         ordering = ['create_at']
+
+
+
+# Extending User model
+# Working to extend User model so we have more fields that update into database
+
+class UserProfile(models.Model):
+    # On delete CASCADE deletes all user info when user is deleted
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    current_city = models.CharField(max_length=400)
+    user_img = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.user.username
