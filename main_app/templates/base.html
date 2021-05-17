@@ -54,9 +54,8 @@
                 {% else %}
 
                     <li class="nav-item"> <a class="nav-link" href="{% url 'home' %}">Home</a> </li>
-                    <li class="nav-item"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">sign up</button></li>
                    
-                    {% comment %} <li class="nav-item"> <a class="nav-link" href="{% url 'signup' %}">Sign Up</a> </li> {% endcomment %}
+                    <li class="nav-item"> <a class="nav-link" href="{% url 'signup' %}">Sign Up</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="{% url 'login' %}">Login</a> </li>
                     
                 {% endif %}
@@ -79,7 +78,7 @@
             </li>
         </ul>
     </div> {% endcomment %}
- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+1 {% comment %} <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -108,7 +107,7 @@
               </div>
           </div>
       </div>
-  </div>
+  </div> {% endcomment %}
 
 
     {% block content %}
