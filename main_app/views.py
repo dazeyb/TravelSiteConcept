@@ -117,7 +117,7 @@ class EditProfile(TemplateView):
         return render(request, "edit_profile.html", context)
 
     def post(self, request):
-        edit_form = EditProfileForm(request.POST)
+        edit_form = EditProfileForm(request.UPDATE)
 
         if edit_form.is_valid():
             edit = edit_form.save()
