@@ -63,9 +63,8 @@ a:hover {
     color:#f3d48b;
 }
 
-.carousel-inner {
-    height: 30%;
-    object-fit: cover;
+.carousel, .carousel-inner {
+    height: 500px;
 }
 
 .div_about-header {
