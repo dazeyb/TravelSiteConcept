@@ -15,7 +15,9 @@ urlpatterns = [
 
     path('', views.showslides),
 
-    path('profile/<int:pk>/', views.PostDetail.as_view(), name="post_detail")
+    path('profile/<int:pk>/', views.PostDetail.as_view(), name="post_detail"),
+
+    path('edit_profile'/<str:pk>/', views.EditProfile.as_view(), name="edit_profile")
 
 ]
 

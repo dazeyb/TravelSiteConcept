@@ -93,6 +93,20 @@ class PostDetail(DetailView):
     model = Post
     template_name = "post_detail.html"
 
+
+class EditProfile(View):
+    form = EditProfileForm()
+
+
+
+
+
+
+
+
+
+
+
 # original form ------
 # class Signup(View):
 #     def get(self, request):
