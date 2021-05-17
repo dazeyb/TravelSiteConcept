@@ -152,7 +152,7 @@ main {
 
 .img_city-link {
     height: 75px;
-    width: 60%;
+    width: 50%;
     border-radius: 1px;
     position: relative;
 }
@@ -161,7 +161,7 @@ main {
 .p_city-link {
     
     font-size: 25px;
-    margin-left: -20%;
+    margin-left: 20%;
     
 }
 
