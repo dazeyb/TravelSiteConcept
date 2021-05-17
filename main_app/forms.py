@@ -17,4 +17,4 @@ class UserProfileForm(forms.ModelForm):         # 5:06
 
     class Meta:
         model = UserProfile
-        fields = ('current_city', 'user_img')
+        fields = ('current_city',)
