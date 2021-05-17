@@ -123,12 +123,14 @@ main {
     font-size: 40px;
     font-weight: 600;
     color: whitesmoke;
+    margin-left: 14%;
 }
 
 .a_city-link {
     height: 125px;
     width:85%;
     margin-bottom: 40px;
+    
 }
 
 .div_city-link {
@@ -137,6 +139,7 @@ main {
     height: 125px;
     padding: 20px;
     margin: 30px;
+    margin-left: 16%;
     border: 2px solid #495057;
     border-radius: 25px;
     color: #495057;
@@ -149,14 +152,17 @@ main {
 
 .img_city-link {
     height: 75px;
-    width: 120px;
+    width: 60%;
     border-radius: 1px;
+    position: relative;
 }
 
+
 .p_city-link {
-    padding: 15px;
+    
     font-size: 25px;
-    align-self: center;
+    margin-left: -20%;
+    
 }
 
 
