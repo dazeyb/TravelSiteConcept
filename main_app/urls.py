@@ -17,6 +17,7 @@ urlpatterns = [
 
     path('profile/<int:pk>/', views.PostDetail.as_view(), name="post_detail")
 
+
 ]
 
 # path('accounts/', include(django.contrib.auth.urls')),
