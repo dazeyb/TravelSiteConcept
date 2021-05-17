@@ -54,16 +54,21 @@
                 {% else %}
 
                     <li class="nav-item"> <a class="nav-link" href="{% url 'home' %}">Home</a> </li>
-                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                   <a class="nav-link" href="" data-toggle="modal" data-target="#signup-modal">
     sign up
-</button>
+</a>
                     {% comment %} <li class="nav-item"> <a class="nav-link" href="{% url 'signup' %}">Sign Up</a> </li> {% endcomment %}
-                    <li class="nav-item"> <a class="nav-link" href="{% url 'login' %}">Login</a> </li>
+                    
+                    <a class="nav-link" href="" data-toggle="modal" data-target="#login-modal">
+    log in
+</a>
+                    {% comment %} <li class="nav-item"> <a class="nav-link" href="{% url 'login' %}">Login</a> </li> {% endcomment %}
                     
                 {% endif %}
 
         </ul>
     </div>
+
 
     {% comment %} This is the old code that isn't a dynamic navbar, we can revert to this if it breaks {% endcomment %}
 
@@ -81,12 +86,12 @@
         </ul>
     </div>  {% endcomment %}
     <form method="POST">
- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+ <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <h5 class="modal-title" id="exampleModalLongTitle">Sign Up!</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
@@ -105,9 +110,40 @@
                     
               </div>
               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn_close-modal" data-dismiss="modal">Close</button>
                 
-                  <button type="submit" class="btn btn-primary">Register</button>
+                  <button type="submit" class="btn btn_submit">Register</button>
+              </div>
+          </div>
+      </div>
+  </div> 
+</form>
+    <form method="POST" action="{% url 'login' %}">
+ <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Log In</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                 {{ form.errors }}
+
+                {% csrf_token %}{{log_in.as_p}}
+    
+                
+                <input type="hidden" value="{{ next }}" name="next">
+
+
+                    
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn_close-modal" data-dismiss="modal">Close</button>
+                
+                  <button type="submit" class="btn btn_submit">Log In</button>
               </div>
           </div>
       </div>

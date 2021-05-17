@@ -3,7 +3,7 @@
 
 
 const carousel = function() {
-    $("#carouselExampleControls").carousel({interval: 1000})
+    $("#carouselExampleControls").carousel({interval: 5000})
 };
 
 carousel();
