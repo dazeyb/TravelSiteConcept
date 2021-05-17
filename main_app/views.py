@@ -74,7 +74,9 @@ class Signup(View):
             profile.save()
 
             login(request, user)
-            return redirect("login")
+
+            return redirect("profile")
+
 
 
         else:
@@ -112,18 +114,17 @@ class Signup(View):
 #     context = {'form' : form, 'profile_form' : profile_form}
 
 
-
 def showslides(request):
     return render(request, 'home.html')
 
-class PubProfile(TemplateView):
+
+class Profile(TemplateView):
     template_name = "profile.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["posts"] = Post.objects.all()
         return context
-
 
 
 class PostDetail(DetailView):
