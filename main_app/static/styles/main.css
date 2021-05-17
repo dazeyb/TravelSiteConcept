@@ -50,7 +50,7 @@ a:hover {
 }
 
 .carousel-inner img {
-    width: 100%;
+    width: auto;
     height: 400px;
 }
 
