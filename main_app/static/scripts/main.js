@@ -3,11 +3,10 @@
 
 
 const carousel = function() {
-    $("#carousel").carousel({interval: 1000})
+    $("#carouselExampleControls").carousel({interval: 1000})
 };
 
 carousel();
-
 
 
 
@@ -17,3 +16,4 @@ carousel();
 
 
 
+// Enable Carousel Indicators
