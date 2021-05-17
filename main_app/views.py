@@ -29,9 +29,54 @@ class Home(TemplateView):
 
 # This functions but doesn't have extra fields we need, keeping as a backup
 
+
+class Signup(View):
+
+    def get(self, request):
+        form = SignUpForm()
+        profile_form = UserProfileForm()
+        context = {"form": form, "profile_form": profile_form}
+        return render(request, "signup.html", context)
+
+    def post(self, request):
+        form = SignUpForm(request.POST)
+        profile_form = UserProfileForm(request.POST)
+
+        if form.is_valid() and profile_form.is_valid():
+            user = form.save()
+            profile = profile_form.save(commit=False)
+            profile.user = user
+
+            profile.save()
+
+            login(request, user)
+            return redirect("login")
+        else:
+            return redirect("signup.html")
+
+
+def showslides(request):
+    return render(request, 'home.html')
+
+
+class Profile(TemplateView):
+    template_name = "profile.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["posts"] = Post.objects.all()
+        return context
+
+
+class PostDetail(DetailView):
+    model = Post
+    template_name = "post_detail.html"
+
+ # original form ------
 # class Signup(View):
 #     def get(self, request):
-#         form = UserCreationForm()
+#         form = SignUpForm()
+#         profile_form = UserProfileForm()
 #         context = {"form": form}
 #         return render(request, "signup.html", context)
 
@@ -46,43 +91,42 @@ class Home(TemplateView):
 #             print(form.errors, "Failed to sign-up user")
 #             return render(request, "signup.html", context)
 
-# 2nd attempt below 
-
-class Signup(View):
-    def get(self, request):
-        # form = UserCreationForm
-        form = SignUpForm()
-        profile_form = UserProfileForm(request.POST)
-        context = {"form": form}
-        return render(request, "signup.html", context)
-
-    def post(self, request):
-        # form = UserCreationForm
-        form = SignUpForm(request.POST)
+# 2nd attempt below
 
 
-# If it breaks takeout the profile_form part
-        if form.is_valid() and profile_form.is_valid():
-            user = form.save()
+# class Signup(TemplateView):
+#     def get(self, request):
+#         # form = UserCreationForm
+#         form = SignUpForm()
+#         # profile_form = UserProfileForm(request.POST)
+#         context = {"form": form}
+#         return render(request, "signup.html", context)
+
+#     def post(self, request):
+#         # form = UserCreationForm
+#         form = SignUpForm(request.POST)
 
 
-# commit = false makes so it doesn't save to database right away
-
-            profile = profile_form.save(commit=False)
-            profile.user = user
-
-            profile.save()
-
-            login(request, user)
-
-            return redirect("profile")
+# # If it breaks takeout the profile_form part
+#         if form.is_valid() and profile_form.is_valid():
+#             user = form.save()
 
 
+# # commit = false makes so it doesn't save to database right away
 
-        else:
-            context = {'form': form, 'profile_form' : profile_form}
-            print(form.errors, "Failed to sign-up user")
-            return render(request, "signup.html", context)
+#             profile = profile_form.save(commit=False)
+#             profile.user = user
+
+#             profile.save()
+
+#             login(request, user)
+
+#             return redirect("profile")
+
+#         else:
+#             context = {'form': form, 'profile_form': profile_form}
+#             print(form.errors, "Failed to sign-up user")
+#             return render(request, "signup.html", context)
 
 # 3rd attempt
 
@@ -110,23 +154,5 @@ class Signup(View):
 #     else:
 #         form = SignUpForm()
 #         profile_form = UserProfileForm()
-    
+
 #     context = {'form' : form, 'profile_form' : profile_form}
-
-
-def showslides(request):
-    return render(request, 'home.html')
-
-
-class Profile(TemplateView):
-    template_name = "profile.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["posts"] = Post.objects.all()
-        return context
-
-
-class PostDetail(DetailView):
-    model = Post
-    template_name = "post_detail.html"
