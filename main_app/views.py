@@ -27,6 +27,27 @@ from django.contrib.auth.forms import UserCreationForm
 class Home(TemplateView):
     template_name = "home.html"
 
+    def get(self, request):
+        form = SignUpForm()
+        profile_form = UserProfileForm()
+        context = {"form": form, "profile_form": profile_form}
+        return render(request, "home.html", context)
+
+    def post(self, request):
+        form = SignUpForm(request.POST)
+        profile_form = UserProfileForm(request.POST)
+
+        if form.is_valid() and profile_form.is_valid():
+            user = form.save()
+            profile = profile_form.save(commit=False)
+            profile.user = user
+
+            profile.save()
+
+            login(request, user)
+            return redirect("login")
+        else:
+            return redirect("home.html")
 # This functions but doesn't have extra fields we need, keeping as a backup
 
 
