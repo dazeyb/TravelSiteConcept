@@ -1,6 +1,6 @@
 # from main_app.forms import SignUpForm
 from typing import ContextManager
-from main_app.models import Post
+from main_app.models import Post, UserProfile
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
@@ -11,7 +11,8 @@ from django.http import HttpResponse
 
 # forms
 # from .forms import SignUpForm
-from .forms import SignUpForm, UserProfileForm, LogInForm
+from .forms import SignUpForm, UserProfileForm, EditProfileForm, LogInForm
+
 
 # auth imports
 from django.contrib.auth import authenticate, login
@@ -104,6 +105,45 @@ class Profile(TemplateView):
 class PostDetail(DetailView):
     model = Post
     template_name = "post_detail.html"
+
+
+class EditProfile(TemplateView):
+    # model = UserProfile
+    template_name = "edit_profile.html"
+
+    def get(self, request):
+        edit_form = EditProfileForm()
+        context = {"edit_form" : edit_form}
+        return render(request, "edit_profile.html", context)
+
+    def post(self, request):
+        edit_form = EditProfileForm(request.POST)
+
+        if edit_form.is_valid():
+            edit = edit_form.save()
+            # edit.save()
+
+            return redirect("profile")
+
+        else:
+            return redirect("edit_profile.html")
+
+    
+
+
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context["userprofile"] = UserProfile.objects.all()
+    #     return context
+
+
+    # def get_success_url(self):
+    #     return reverse('', kwargs={'pk': self.object.pk})
+
+
+
+
 
 # original form ------
 # class Signup(View):

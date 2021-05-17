@@ -20,6 +20,12 @@ class UserProfileForm(forms.ModelForm):         # 5:06
         fields = ('current_city',)
 
 
+class EditProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = UserProfile
+        fields = ('current_city',)
+
 class LogInForm(forms.ModelForm):
 
     class Meta:
