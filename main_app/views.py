@@ -11,7 +11,7 @@ from django.http import HttpResponse
 
 # forms
 # from .forms import SignUpForm
-from .forms import SignUpForm, UserProfileForm, EditProfileForm, LogInForm
+from .forms import SignUpForm, UserProfileForm, LogInForm, EditProfileForm
 
 
 # auth imports
@@ -89,7 +89,7 @@ class Signup(View):
             return redirect("signup.html")
 
 
-#def showslides(request):
+# def showslides(request):
  #   return render(request, 'home.html')
 
 
@@ -107,42 +107,26 @@ class PostDetail(DetailView):
     template_name = "post_detail.html"
 
 
-class EditProfile(TemplateView):
-    # model = UserProfile
-    template_name = "edit_profile.html"
+class EditProfile(UpdateView):
 
     def get(self, request):
         edit_form = EditProfileForm()
-        context = {"edit_form" : edit_form}
+        context = {"edit_form": edit_form}
         return render(request, "edit_profile.html", context)
 
     def post(self, request):
-        edit_form = EditProfileForm(request.UPDATE)
+        edit_form = EditProfileForm(request.POST)
+        edit_form.save()
 
-        if edit_form.is_valid():
-            edit = edit_form.save()
-            # edit.save()
-
-            return redirect("profile")
-
-        else:
-            return redirect("edit_profile.html")
-
-    
-
-
+        return redirect("profile")
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
     #     context["userprofile"] = UserProfile.objects.all()
     #     return context
 
-
     # def get_success_url(self):
     #     return reverse('', kwargs={'pk': self.object.pk})
-
-
-
 
 
 # original form ------
