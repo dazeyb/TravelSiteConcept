@@ -13,12 +13,13 @@ urlpatterns = [
 
     path('profile/', views.Profile.as_view(), name="profile"),
 
-  #  path('', views.showslides),
+    #  path('', views.showslides),
 
-# Change routes to POSTS
+    # Change routes to POSTS
     path('profile/<int:pk>/', views.PostDetail.as_view(), name="post_detail"),
 
-    path('profile/edit_profile/', views.EditProfile.as_view(), name="edit_profile")
+    path('profile/edit_profile',
+         views.EditProfile.as_view(), name="edit_profile"),
 
 
 ]
