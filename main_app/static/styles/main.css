@@ -2,6 +2,13 @@
     box-sizing: border-box;
     padding: none;
     margin: none;
+    /* background-color: rgb(234, 236, 233); */
+
+}
+
+input {
+    border-radius: 5px;
+    outline: none;
 }
 
 body {
@@ -11,52 +18,75 @@ body {
 
 a, a:hover {
     text-decoration: none;
-    color: whitesmoke;
+    color: rgb(234, 236, 233);
     font-weight:500;
 }
 a:hover {
-    color: rgb(243, 132, 76);
+    /* color: rgb(243, 132, 76); */
+    color: #f3d48b;
 }
 
 
+span {
+    color: #495057;
+}
+
 .navbar {
     background-color: rgb(56, 87, 112);
-    color: whitesmoke;
-    margin: 10px 10px 0px 10px;
-    height: 100px;
-    border: 2px solid #495057;
+    color: rgb(234, 236, 233);
+    margin-bottom: 35px;
+    height: 80px;
 }
 
 .logo {
     font-family: 'Dancing Script', cursive;
-    font-size: 30px;
-    color: #f3d48b
+    font-size: 40px;
+    color: #f3d48b;
+    margin-left: 35px;
 }
 
 .nav-link {
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 45px;
+    letter-spacing: 2px;
+}
+
+.login {
+    margin-right: 30px;
+}
+
+.logout {
+    margin-right: 30px;
+
 }
 
 
-.div_carousel {
-    background-color: whitesmoke;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://wallpaperaccess.com/full/249854.jpg);
-    object-fit:scale-down;
+.modal-header {
+    background-color: rgb(56, 87, 112);
 }
 
-.carousel-inner img {
-    width: 100%;
-    height: 400px;
+.modal-title {
+    color: #f3d48b;
+}
+
+.btn_close-modal {
+    background-color: #495057;
+    color: whitesmoke;
+
+}
+
+.btn_submit {
+    background-color: rgb(56, 87, 112);
+    color:#f3d48b;
+}
+
+.carousel, .carousel-inner {
+    height: 500px;
 }
 
 .div_about-header {
     padding: 15px;
-    background-color: rgb(234, 236, 233);
     display: flex;
     margin-left: 32%;
     justify-content: center;
@@ -86,7 +116,7 @@ h4 {
     margin-left: 13%;
     gap: 25px;
     width: 75%;
-    background-color: #01697c;
+    background-color: rgb(56, 87, 112);
     color: #495057;
     border-radius: 10px;
 }
@@ -111,60 +141,72 @@ main {
 }
 .section_panel-left {
     background-color: rgb(56, 87, 112);
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin: 10px 5px 10px 10px;
-    border: 2px solid #495057;
+    margin: 0;
+
+border-radius: 0 25px 0 0;
 }
 .p_cities-header {
     margin: 30px 30px 0px 30px;
     font-size: 40px;
     font-weight: 600;
-    color: whitesmoke;
+    margin-left: 14%;
+    color: rgb(234, 236, 233);
+    letter-spacing: 1.5px;
 }
 
 .a_city-link {
     height: 125px;
     width:85%;
     margin-bottom: 40px;
+    
 }
 
 .div_city-link {
     display: flex;
-    width: 85%;
     height: 125px;
     padding: 20px;
     margin: 30px;
+    margin-left: 16%;
     border: 2px solid #495057;
     border-radius: 25px;
     color: #495057;
-    background-color: whitesmoke;
+    background-color: rgb(234, 236, 233);
 }
 
 .div_city-link:hover {
-    background-color: rgb(243, 132, 76);
+    /* background-color: rgb(243, 132, 76); */
+    background-color: #f3d48b;
 }
 
 .img_city-link {
-    height: 75px;
-    width: 120px;
+    /* height: 75px;
+    width: 50%; */
+
     border-radius: 1px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
+
 
 .p_city-link {
-    padding: 15px;
-    font-size: 25px;
-    align-self: center;
+    font-size: 21px;
+    margin-left: 5%;
+    margin-top: 11%;
+    
 }
 
+ /* --------------------------------------------------------------------------------------- */
 
 .section_panel-right {
-    background-color: whitesmoke;
+    background-color: rgb(234, 236, 233);
     width: 60%;
-    margin: 10px 10px 10px 5px;
-    border: 2px solid #495057;
+    margin: 0px;
 }
 
 .div_userinfo {
@@ -179,9 +221,28 @@ main {
     margin-left: 30px;
 }
 
-.p_member-since {
-    font-size: small;
+
+
+.p_username {
+    font-size: 44px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
 }
+.p_home-city{ 
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+.p_member-since {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+
+
 .div_user-city-photo {
     width: 55%;
     display: flex;
@@ -203,16 +264,16 @@ main {
 }
 
 .a_userposts-card {
-    color: #495057;
+    color: #f3d48b;
     height: 20%;
     width: 75%;
     display: flex;
     flex-direction: row;
     object-fit: contain;
     padding: 20px;
-    background-color: whitesmoke;
+    background-color: rgb(87, 122, 151);;
     border-radius: 20px;
-    border: 2px solid#495057;
+    
 
 }
 
@@ -223,7 +284,7 @@ main {
 .card-img-top {
     height: 75px;
     width: 120px;
-    border-radius: 1px;
+    border-radius: 35px;
     margin-right: 10px;
 }
 .card-title {
