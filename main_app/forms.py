@@ -10,6 +10,7 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
+        # help_texts = {'username': None}
         fields = ('username', 'password1', 'password2')
 
 
