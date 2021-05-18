@@ -7,6 +7,9 @@
     margin: none;
     /* background-color: rgb(234, 236, 233); */
 
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
 }
 
 input {
@@ -19,7 +22,12 @@ body {
     color: #495057;
 }
 
-a, a:hover {
+.btn {
+    font-weight: 500;
+}
+
+
+a {
     text-decoration: none;
     color: rgb(234, 236, 233);
     font-weight:500;
@@ -66,6 +74,11 @@ label {
     font-weight: 500;
     margin-left: 45px;
     letter-spacing: 2px;
+}
+
+.nav-link:hover {
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 
 .login {
@@ -118,8 +131,17 @@ label {
 
 .btn_close-modal, .btn_submit {
     font-size: 18px;
-    font-weight: 500px;
     letter-spacing: 1px;
+    margin-right: 25px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.btn_close-modal:hover, .btn_submit:hover {
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin-right: 25px;
 }
 
 .btn_close-modal {
