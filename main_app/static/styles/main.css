@@ -1,4 +1,5 @@
 *{
+    font-family: 'IBM Plex Sans', sans-serif;
     box-sizing: border-box;
     padding: none;
     margin: none;
@@ -43,6 +44,7 @@ span {
 }
 
 .nav-link {
+    font-family: 'Oxygen', sans-serif;
     font-size: 15px;
     font-weight: 300;
 }
@@ -56,12 +58,14 @@ span {
 }
 
 .btn_close-modal {
+    font-family: 'Oxygen', sans-serif;
     background-color: #495057;
     color: whitesmoke;
 
 }
 
 .btn_submit {
+    font-family: 'Oxygen', sans-serif;
     background-color: rgb(56, 87, 112);
     color:#f3d48b;
 }
@@ -82,6 +86,7 @@ span {
 }
 
 h4 {
+    font-family: 'Oxygen', sans-serif;
     font-weight: 400;
 }
 
@@ -133,6 +138,7 @@ main {
     margin: 0;
 }
 .p_cities-header {
+    font-family: 'Oxygen', sans-serif;
     margin: 30px 30px 0px 30px;
     font-size: 40px;
     font-weight: 600;
@@ -141,6 +147,7 @@ main {
 }
 
 .a_city-link {
+    font-family: 'Oxygen', sans-serif;
     height: 125px;
     width:85%;
     margin-bottom: 40px;
@@ -172,7 +179,7 @@ main {
 
 
 .p_city-link {
-    
+    font-family: 'Oxygen', sans-serif;
     font-size: 25px;
     margin-left: 5%;
     
@@ -198,6 +205,7 @@ main {
 }
 
 .p_member-since {
+    font-family: 'Oxygen', sans-serif;
     font-size: small;
 }
 .div_user-city-photo {
@@ -279,5 +287,22 @@ main {
 }
 
 .p_post-detail-body {
+    font-family: 'Oxygen', sans-serif;
     margin: 15px 50px 25px 50px;
 }
+
+h2 {
+    font-family: 'Oxygen', sans-serif;
+}
+
+h5 {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.p_username {
+    font-family: 'Oxygen', sans-serif;
+
+}
+
+
+
