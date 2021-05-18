@@ -264,6 +264,16 @@ border-radius: 0 25px 0 0;
     height: 80%;
 }
 
+.a_edit-profile {
+    margin-left: 20px;
+}
+
+.icon_edit-profile {
+    font-size: 20px;
+    font-weight: 100;
+    color: #62676b;
+}
+
 .div_userposts {
     display: flex;
     flex-direction: column;
