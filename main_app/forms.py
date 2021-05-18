@@ -19,12 +19,12 @@ class UserProfileForm(forms.ModelForm):         # 5:06
         model = UserProfile
         fields = ('current_city',)
 
+# By default form tries to CREATE on post. this form is null because of this process. Edit form is calling on form 
+# class EditProfileForm(forms.ModelForm):
 
-class EditProfileForm(forms.ModelForm):
-
-    class Meta:
-        model = UserProfile
-        fields = ('current_city',)
+#     class Meta:
+#         model = UserProfile
+#         fields = ('current_city',)
 
 
 class LogInForm(forms.ModelForm):
