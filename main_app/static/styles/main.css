@@ -22,8 +22,10 @@ a, a:hover {
     font-weight:500;
 }
 a:hover {
-    color: rgb(243, 132, 76);
+    /* color: rgb(243, 132, 76); */
+    color: #f3d48b;
 }
+
 
 span {
     color: #495057;
@@ -33,19 +35,32 @@ span {
     background-color: rgb(56, 87, 112);
     color: rgb(234, 236, 233);
     margin-bottom: 35px;
-    height: 100px;
+    height: 80px;
 }
 
 .logo {
     font-family: 'Dancing Script', cursive;
-    font-size: 30px;
-    color: #f3d48b
+    font-size: 40px;
+    color: #f3d48b;
+    margin-left: 35px;
 }
 
 .nav-link {
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 45px;
+    letter-spacing: 2px;
 }
+
+.login {
+    margin-right: 30px;
+}
+
+.logout {
+    margin-right: 30px;
+
+}
+
 
 .modal-header {
     background-color: rgb(56, 87, 112);
@@ -131,6 +146,8 @@ main {
     flex-direction: column;
     align-content: center;
     margin: 0;
+
+border-radius: 0 25px 0 0;
 }
 .p_cities-header {
     margin: 30px 30px 0px 30px;
@@ -138,6 +155,7 @@ main {
     font-weight: 600;
     margin-left: 14%;
     color: rgb(234, 236, 233);
+    letter-spacing: 1.5px;
 }
 
 .a_city-link {
@@ -160,24 +178,30 @@ main {
 }
 
 .div_city-link:hover {
-    background-color: rgb(243, 132, 76);
+    /* background-color: rgb(243, 132, 76); */
+    background-color: #f3d48b;
 }
 
 .img_city-link {
-    height: 75px;
-    width: 50%;
+    /* height: 75px;
+    width: 50%; */
+
     border-radius: 1px;
     position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 
 .p_city-link {
-    
-    font-size: 25px;
+    font-size: 21px;
     margin-left: 5%;
+    margin-top: 11%;
     
 }
 
+ /* --------------------------------------------------------------------------------------- */
 
 .section_panel-right {
     background-color: rgb(234, 236, 233);
@@ -197,9 +221,28 @@ main {
     margin-left: 30px;
 }
 
-.p_member-since {
-    font-size: small;
+
+
+.p_username {
+    font-size: 44px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
 }
+.p_home-city{ 
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+.p_member-since {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+
+
 .div_user-city-photo {
     width: 55%;
     display: flex;
