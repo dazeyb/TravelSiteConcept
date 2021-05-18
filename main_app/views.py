@@ -11,8 +11,8 @@ from django.http import HttpResponse
 
 # forms
 # from .forms import SignUpForm
-from .forms import SignUpForm, UserProfileForm, LogInForm, EditProfileForm
-
+from .forms import SignUpForm, UserProfileForm, LogInForm
+# EditProfileForm
 
 # auth imports
 from django.contrib.auth import authenticate, login
@@ -107,18 +107,35 @@ class PostDetail(DetailView):
     template_name = "post_detail.html"
 
 
+# UpdateView automatically makes a form
+
 class EditProfile(UpdateView):
+    model = UserProfile
+    template_name = "edit_profile.html"
 
-    def get(self, request):
-        edit_form = EditProfileForm()
-        context = {"edit_form": edit_form}
-        return render(request, "edit_profile.html", context)
+    fields = ['current_city']
 
-    def post(self, request):
-        edit_form = EditProfileForm(request.POST)
-        edit_form.save()
+    success_url = "/profile/"
 
-        return redirect("profile")
+
+
+
+
+    # def get(self, request):
+    #     edit_form = EditProfileForm()
+    #     context = {"edit_form": edit_form}
+    #     return render(request, "edit_profile.html", context)
+
+    # def post(self, request):
+    #     edit_form = EditProfileForm(request.POST)
+    #     edit_form.save()
+
+    #     return redirect("profile")
+
+
+
+
+
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
