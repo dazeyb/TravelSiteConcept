@@ -52,7 +52,9 @@ class Home(TemplateView):
             return redirect("accounts/profile")
         else:
 
-            return redirect("")
+
+           # else statement does not seem to have any impact
+            return redirect("signup")
 
     def post(self, request):
         log_in = LogInForm(request.POST)
@@ -64,7 +66,12 @@ class Home(TemplateView):
             return redirect("accounts/profile")
         else:
 
-            return redirect("")
+
+           # else statement does not seem to have any impact
+
+            return redirect("home")
+
+
 # This functions but doesn't have extra fields we need, keeping as a backup
 
 
