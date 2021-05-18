@@ -26,6 +26,7 @@ class EditProfileForm(forms.ModelForm):
         model = UserProfile
         fields = ('current_city',)
 
+
 class LogInForm(forms.ModelForm):
 
     class Meta:
