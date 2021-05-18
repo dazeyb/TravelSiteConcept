@@ -26,6 +26,7 @@ a:hover {
     color: #f3d48b;
 }
 
+
 span {
     color: #495057;
 }
@@ -182,18 +183,21 @@ border-radius: 0 25px 0 0;
 }
 
 .img_city-link {
-    height: 75px;
-    width: 50%;
+    /* height: 75px;
+    width: 50%; */
+
     border-radius: 1px;
     position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 
 .p_city-link {
-    
-    font-size: 25px;
+    font-size: 21px;
     margin-left: 5%;
-    backgor
+    margin-top: 11%;
     
 }
 
@@ -223,9 +227,11 @@ border-radius: 0 25px 0 0;
     font-size: 44px;
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 400;
 }
 .p_home-city{ 
     font-size: 20px;
+    font-weight: 500;
     
 }
 
