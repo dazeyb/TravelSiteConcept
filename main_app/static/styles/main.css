@@ -225,11 +225,12 @@ main {
 
 border-radius: 0 25px 0 0;
 }
+
 .p_cities-header {
     font-family: 'Oxygen', sans-serif;
     margin: 30px 30px 0px 30px;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 14%;
     color: rgb(234, 236, 233);
     letter-spacing: 1.5px;

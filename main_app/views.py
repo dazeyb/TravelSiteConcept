@@ -39,6 +39,7 @@ class Home(TemplateView):
     def post(self, request):
         form = SignUpForm(request.POST)
         profile_form = UserProfileForm(request.POST)
+        context = {"form": form, "profile_form": profile_form}
 
         if form.is_valid() and profile_form.is_valid():
             user = form.save()
@@ -50,6 +51,9 @@ class Home(TemplateView):
             login(request, user)
             return redirect("accounts/profile")
         else:
+
+
+           # else statement does not seem to have any impact
             return redirect("signup")
 
     def post(self, request):
@@ -57,16 +61,21 @@ class Home(TemplateView):
 
         if log_in.is_valid():
             user = log_in.save()
+
             login(request, user)
             return redirect("accounts/profile")
         else:
+
+
+           # else statement does not seem to have any impact
+
             return redirect("home")
 
 
 # This functions but doesn't have extra fields we need, keeping as a backup
 
 
-class Signup(View):
+class Signup(TemplateView):
 
     def get(self, request):
         form = SignUpForm()
@@ -119,10 +128,6 @@ class EditProfile(UpdateView):
 
     success_url = "/profile/"
 
-
-
-
-
     # def get(self, request):
     #     edit_form = EditProfileForm()
     #     context = {"edit_form": edit_form}
@@ -133,11 +138,6 @@ class EditProfile(UpdateView):
     #     edit_form.save()
 
     #     return redirect("profile")
-
-
-
-
-
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
