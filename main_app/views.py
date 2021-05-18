@@ -50,7 +50,7 @@ class Home(TemplateView):
             login(request, user)
             return redirect("accounts/profile")
         else:
-            return redirect("home.html")
+            return redirect("signup")
 
     def post(self, request):
         log_in = LogInForm(request.POST)
@@ -61,6 +61,8 @@ class Home(TemplateView):
             return redirect("accounts/profile")
         else:
             return redirect("home")
+
+
 # This functions but doesn't have extra fields we need, keeping as a backup
 
 
@@ -70,7 +72,7 @@ class Signup(View):
         form = SignUpForm()
         profile_form = UserProfileForm()
         context = {"form": form, "profile_form": profile_form}
-        return render(request, "signup.html", context)
+        return render(request, "registration/signup.html", context)
 
     def post(self, request):
         form = SignUpForm(request.POST)
@@ -86,7 +88,7 @@ class Signup(View):
             login(request, user)
             return redirect("login")
         else:
-            return redirect("signup.html")
+            return redirect("signup")
 
 
 # def showslides(request):

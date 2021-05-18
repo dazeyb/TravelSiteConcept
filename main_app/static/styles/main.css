@@ -1,10 +1,15 @@
-*{
+
+
+* {
     font-family: 'IBM Plex Sans', sans-serif;
     box-sizing: border-box;
     padding: none;
     margin: none;
     /* background-color: rgb(234, 236, 233); */
 
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
 }
 
 input {
@@ -17,7 +22,12 @@ body {
     color: #495057;
 }
 
-a, a:hover {
+.btn {
+    font-weight: 500;
+}
+
+
+a {
     text-decoration: none;
     color: rgb(234, 236, 233);
     font-weight:500;
@@ -29,7 +39,19 @@ a:hover {
 
 
 span {
-    color: #495057;
+    /* color: #495057; */
+    color: #abc0d4;
+}
+
+li {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+label {
+    font-size: 25px;
+    font-weight: 900;
 }
 
 .navbar {
@@ -54,29 +76,78 @@ span {
     letter-spacing: 2px;
 }
 
+.nav-link:hover {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
 .login {
     margin-right: 30px;
 }
+
+/* Hides helptext in login modal */
+    .helptext {
+        visibility:hidden;
+    }
 
 .logout {
     margin-right: 30px;
 
 }
 
+/* .modal-content {  
+    border: 2px rgb(56, 87, 112); 
+    border-radius: 50px; 
+} */ 
+
+.modal-content  {
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 25px;
+        border: 2px rgb(56, 87, 112);
+}
+
+
+.modal-body {
+    background-color: rgb(234, 236, 233);
+    border: 0px;
+}
 
 .modal-header {
     background-color: rgb(56, 87, 112);
+    border-radius: 25px 25px 0 0;
 }
 
 .modal-title {
     color: #f3d48b;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.modal-footer {
+    background-color: rgb(234, 236, 233);
+    border-radius: 0 0 25px 25px;
+}
+
+.btn_close-modal, .btn_submit {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-right: 25px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.btn_close-modal:hover, .btn_submit:hover {
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin-right: 25px;
 }
 
 .btn_close-modal {
     font-family: 'Oxygen', sans-serif;
     background-color: #495057;
     color: whitesmoke;
-
 }
 
 .btn_submit {
@@ -337,7 +408,12 @@ border-radius: 0 25px 0 0;
 }
 
 .h2_post-detail-title {
-    margin: 15px 50px 25px 50px;
+    margin: 15px 50px 5px 50px;
+}
+
+.h3_post-author {
+    margin-left: 50px;
+    margin-bottom: 10px;
 }
 
 .p_post-detail-body {
