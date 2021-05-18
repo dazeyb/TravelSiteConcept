@@ -50,7 +50,7 @@ class Home(TemplateView):
             login(request, user)
             return redirect("accounts/profile")
         else:
-            return redirect("home.html")
+            return redirect("signup.html")
 
     def post(self, request):
         log_in = LogInForm(request.POST)
@@ -61,6 +61,8 @@ class Home(TemplateView):
             return redirect("accounts/profile")
         else:
             return redirect("home")
+
+
 # This functions but doesn't have extra fields we need, keeping as a backup
 
 
