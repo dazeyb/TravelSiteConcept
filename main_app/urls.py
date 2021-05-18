@@ -21,7 +21,8 @@ urlpatterns = [
     # path('profile/edit_profile/',
     #      views.EditProfile.as_view(), name="edit_profile"),
 
-    path('profile/edit_profile/<int:pk>/', views.EditProfile.as_view(), name="edit_profile"),
+    path('profile/edit_profile/<int:pk>/',
+         views.EditProfile.as_view(), name="edit_profile"),
 
 
 ]

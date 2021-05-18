@@ -3,7 +3,7 @@
 <h1>Sign Up</h1>
 {{ form.errors }}
 
-<form method="POST" action="{% url 'signup' %}">
+<form class="form_signup" method="POST" action="{% url 'signup' %}">
 
     {% csrf_token %}
     {{ form.as_p }}
