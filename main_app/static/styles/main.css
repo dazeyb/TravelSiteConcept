@@ -449,9 +449,9 @@ h5 {
 
 }
 
-/*---------------------------------Sign Up Page---------------------------------------------------- */
+/*---------------------------------Sign Up/Login Pages---------------------------------------------------- */
 
- .h1_signup-page {
+ .h1_signup-page, .h1_login-page {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 35px;
@@ -519,7 +519,7 @@ input.login_up_page_button {
     background-color: rgb(87, 122, 151); 
 } 
 
-.div_signup-page {
+.div_signup-page, .div_login-page {
     margin-left: 35%;
     /* margin-top: 10px;
     margin-bottom: 10px; */
