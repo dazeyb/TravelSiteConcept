@@ -1,19 +1,20 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1 class="sign_up_page">Sign Up</h1>
-{{ form.errors }}
+<div class="div_signup-page">
+    <h1 class="h1_signup-page" id="h1_signup-page">Sign Up</h1>
+    {{ form.errors }}
 
 
-<form class="form_signup" method="POST" action="{% url 'signup' %}">
+        <form class="form_signup form_parent-label" method="POST" action="{% url 'signup' %}">
 
-    {% csrf_token %}
-    {{ form.as_p }}
-    {{ profile_form.as_p }}
-    <input class="sign_up_page_button" type="submit" value="Sign Up"/>
-    <input class="sign_up_page_button" type="hidden" value="{{ next }}" name="next"/>
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ profile_form.as_p }}
+            <input class="btn_signup-page" type="submit" value="Submit"/>
+            <input class="btn_signup-page" type="hidden" value="{{ next }}" name="next"/>
 
-</form>
-
+        </form>
+</div>
 
 {% endblock %}
 
