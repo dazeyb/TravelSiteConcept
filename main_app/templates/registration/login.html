@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>LoginLOGINLOGINLOGIN</h1>
+<h1 class="login_page">Login</h1>
 
 {{ form.errors }}
 
@@ -8,8 +8,8 @@
 
     {% csrf_token %}{{form.as_p}}
     
-    <input type="submit" value="Login"/>
-    <input type="hidden" value="{{ next }}" name="next">
+    <input class="login_up_page_button" type="submit" value="Login"/>
+    <input class="login_up_page_button" type="hidden" value="{{ next }}" name="next">
 
 </form>
 

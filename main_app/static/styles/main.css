@@ -445,5 +445,55 @@ h5 {
 
 }
 
+/*---------------------------------Sign Up Form---------------------------------------------------- */
+.sign_up_page  {
+    margin: auto;
+    margin-left: 40%;
+    width: 50%;
+    padding: 7px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+label {
+    margin-left: 40%;
+    padding: 7px;
+    font-family: 'Oxygen', sans-serif; 
+}
+
+input#id_username {
+    vertical-align: auto;
+    padding: 7px;
+}
+
+.form_signup li {
+    margin-left: 40%;
+    padding: 7px;
+}
+
+input.sign_up_page_button {
+    height: 37px;
+    margin: auto;
+    margin-left: 40%;
+    padding: 7px;
+    color: #f3d48b;
+    background-color: rgb(87, 122, 151); 
+}
+
+.login_page {
+    margin: auto;
+    margin-left: 40%;
+    width: 50%;
+    padding: 7px;
+    font-family: 'Oxygen', sans-serif;
+}
+input.login_up_page_button {
+    height: 37px;
+    margin: auto;
+    margin-left: 40%;
+    padding: 7px;
+    color: #f3d48b;
+    background-color: rgb(87, 122, 151); 
+}
+
 
 
