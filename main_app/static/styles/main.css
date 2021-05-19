@@ -115,6 +115,7 @@ label {
 .modal-body {
     background-color: rgb(234, 236, 233);
     border: 0px;
+    /* margin-top: 19px; */
 }
 
 .modal-header {
@@ -183,6 +184,7 @@ h4 {
 #h4_wayfarer {
     font-size: 31px;
     font-weight: 600;
+    letter-spacing: 3px;
 }
 
 .topics-container {
@@ -236,9 +238,10 @@ h4 {
 
 
 .section_textarea-header {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
     margin-bottom: 13px;
+    letter-spacing: 1px;
 }
 
 .img_sydney-snow {
