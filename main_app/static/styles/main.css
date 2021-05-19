@@ -308,8 +308,9 @@ border-radius: 0 25px 0 0;
     margin-left: 16%;
     border: 2px solid #495057;
     border-radius: 25px;
-    color: #495057;
-    background-color: rgb(234, 236, 233);
+    color: #f3d48b;
+    /* background-color: rgb(233, 233, 236); */
+    background-color: rgb(100, 100, 100);
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -324,11 +325,13 @@ border-radius: 0 25px 0 0;
     /* height: 75px;
     width: 50%; */
 
-    border-radius: 1px;
+    border-radius: 25px;
     position: relative;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border: 2px outset white;
+    
 }
 
 
