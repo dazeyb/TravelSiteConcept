@@ -274,7 +274,7 @@ main {
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin: 0;
+    margin: 30px 0 0 0;
 
 border-radius: 0 25px 0 0;
 }
@@ -286,14 +286,17 @@ border-radius: 0 25px 0 0;
     font-weight: 500;
     margin-left: 14%;
     color: rgb(234, 236, 233);
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
 }
 
 .a_city-link {
-    font-family: 'Oxygen', sans-serif;
+    /* font-family: 'Oxygen', sans-serif; */
+    font-family: 'IBM Plex Sans', sans-serif;
     height: 125px;
     width:85%;
     margin-bottom: 40px;
+    font-weight: 700;
+
     
 }
 
@@ -307,11 +310,14 @@ border-radius: 0 25px 0 0;
     border-radius: 25px;
     color: #495057;
     background-color: rgb(234, 236, 233);
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .div_city-link:hover {
     /* background-color: rgb(243, 132, 76); */
     background-color: #f3d48b;
+    transform: scale(1.05);
+    color: rgb(56, 87, 112);
 }
 
 .img_city-link {
@@ -331,7 +337,7 @@ border-radius: 0 25px 0 0;
     font-size: 21px;
     margin-left: 5%;
     margin-top: 11%;
-    
+    /* overflow: hidden */
 }
 
  /* --------------------------------------------------------------------------------------- */
@@ -364,14 +370,14 @@ border-radius: 0 25px 0 0;
 }
 .p_home-city{ 
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     
 }
 
 .p_member-since {
     font-family: 'Oxygen', sans-serif;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 30px;
 }
 
@@ -472,20 +478,31 @@ border-radius: 0 25px 0 0;
 
 .h2_post-detail-title {
     margin: 15px 50px 5px 50px;
+    font-size: 44px;
+    font font-weight: 800;
 }
 
 .h3_post-author {
     margin-left: 50px;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .p_post-detail-body {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     margin: 15px 50px 25px 50px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#post-detail-body {
+    font-color: rgb(56, 87, 112);
+
 }
 
 h2 {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
 }
 
 h5 {
@@ -494,6 +511,8 @@ h5 {
 
 .p_username {
     font-family: 'Oxygen', sans-serif;
+    font-weight: 800;
+    font-style: oblique;
 
 }
 
