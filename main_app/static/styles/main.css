@@ -134,7 +134,7 @@ label {
     border-radius: 0 0 25px 25px;
 }
 
-.btn_close-modal, .btn_submit {
+.btn_close-modal, .btn_submit, .btn_submit-profile-edit {
     font-size: 19px;
     letter-spacing: 1px;
     margin-right: 25px;
@@ -144,10 +144,15 @@ label {
     font-weight: 700;
 }
 
-.btn_submit {
+.btn_submit, .btn_submit-profile-edit {
     font-family: 'Oxygen', sans-serif;
     background-color: rgb(56, 87, 112);
     color:#f3d48b;
+}
+
+.btn_submit-profile-edit {
+    margin: 25px 0 0 23%;
+    transform: scale(1.2);
 }
 
 .btn_close-modal:hover, .btn_submit:hover {
@@ -156,7 +161,7 @@ label {
     margin-right: 25px;
 }
 
-.btn_submit:hover {
+.btn_submit:hover, .btn_submit-profile-edit:hover {
     background-color: #f3d48b;
     color: rgb(37, 61, 82);
     font-weight: 900;
@@ -450,7 +455,7 @@ border-radius: 0 25px 0 0;
     flex-direction: row;
     object-fit: contain;
     padding: 15px;
-    background-color: rgb(87, 122, 151);;
+    background-color: rgb(64, 97, 124);
     border-radius: 20px;
 }
 
@@ -470,11 +475,12 @@ border-radius: 0 25px 0 0;
     width: 120px;
     border-radius: 35px;
     margin-right: 10px;
+    border: 2px outset rgba(255, 255, 255, 0.753);
 }
 .card-title {
     display:inline-block;
     width: 60%;
-    margin: 0 0 0 10px;
+    margin: 0 0 3% 5%;
     padding: none;
     font-size: 19px;
     font-weight: 600;
@@ -486,7 +492,7 @@ border-radius: 0 25px 0 0;
     font-weight: 600;
 
     display: inline-block;
-    margin: 5px 0 0 10px;
+    margin: 5px 0 0 5%;
 
 }
 
