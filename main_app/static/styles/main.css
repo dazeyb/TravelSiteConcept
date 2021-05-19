@@ -199,19 +199,41 @@ h4 {
 
     font-size: 14px;
     font-weight: 600;
-    display: inline-flex;
+    /* display: inline-flex; */
 }
+
+/* .section_textarea-left {
+}
+
+.section_textarea-middle {
+}
+
+.section_textarea-right {
+} */
 
 .div_about-textarea {
     padding: 25px;
-
-    margin-left: 13%;
+    /* margin: 0 2% 0 2%; */
     gap: 10px;
     width: 100%;
     background-color: rgb(56, 87, 112);
     color: #495057;
     border-radius: 10px;
 }
+
+/* The three sections left to right on home page */
+.s1 {
+    margin: 0 2% 0 4%;
+}
+
+.s2 {
+    margin: 0 2% 0 2%;
+}
+
+.s3 {
+    margin: 0 4% 0 2%;
+}
+
 
 .section_textarea-header {
     font-size: 22px;
