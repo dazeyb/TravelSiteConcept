@@ -135,12 +135,19 @@ label {
 }
 
 .btn_close-modal, .btn_submit {
-    font-size: 18px;
+    font-size: 19px;
     letter-spacing: 1px;
     margin-right: 25px;
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: 0.6s;
     transition-timing-function: ease;
+    font-weight: 700;
+}
+
+.btn_submit {
+    font-family: 'Oxygen', sans-serif;
+    background-color: rgb(56, 87, 112);
+    color:#f3d48b;
 }
 
 .btn_close-modal:hover, .btn_submit:hover {
@@ -149,17 +156,27 @@ label {
     margin-right: 25px;
 }
 
+.btn_submit:hover {
+    background-color: #f3d48b;
+    color: rgb(37, 61, 82);
+    font-weight: 900;
+    border: 1px outset rgb(37, 61, 82);
+    font-size: 20px;
+}
+
+.btn_close-modal:hover {
+    background-color: #8d3a3a;
+    color: #f3d48b;
+    font-weight: 900; 
+    border: 1px outset rgb(37, 61, 82);
+}
+
 .btn_close-modal {
     font-family: 'Oxygen', sans-serif;
     background-color: #495057;
     color: whitesmoke;
 }
 
-.btn_submit {
-    font-family: 'Oxygen', sans-serif;
-    background-color: rgb(56, 87, 112);
-    color:#f3d48b;
-}
 
 .carousel, .carousel-inner {
     height: 500px;
@@ -382,6 +399,7 @@ border-radius: 0 25px 0 0;
     font-size: 15px;
     font-weight: 500;
     margin-top: 30px;
+    margin-bottom: 25px;
 }
 
 
@@ -396,6 +414,8 @@ border-radius: 0 25px 0 0;
 .img_user-city {
     width: 90%;
     height: 80%;
+    /* border: solid 3px rgb(56, 87, 112); */
+
 }
 
 .a_edit-profile {
@@ -406,6 +426,12 @@ border-radius: 0 25px 0 0;
     font-size: 20px;
     font-weight: 100;
     color: #62676b;
+}
+
+.icon_edit-profile:hover {
+    transform: scale(1.2);
+    color: #3b4044;
+    transition-duration: 0.4s;
 }
 
 .div_userposts {
