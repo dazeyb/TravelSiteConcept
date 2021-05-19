@@ -36,10 +36,12 @@
 
 
                     <p class="p_username">{{ user.username }}</p>
-                    <h2 class="p_home-city">{{ user.userprofile.current_city }}</h2>
+                    <h2 class="p_home-city">{{ user.userprofile.current_city }}<a class="a_edit-profile" href="{% url 'edit_profile' user.userprofile.pk %}"><i class="far fa-edit icon_edit-profile"></i></a> 
+                    </h2>
                     <p class="p_member-since">Member since {{ user.date_joined }}</p>
-                    {% comment %} Need to style button {% endcomment %}
-                    <li class="li-edit_profile"> <a class="" href="{% url 'edit_profile' %}">Edit Profile</a> </li>
+                    {% comment %} Need to style button, user.userprofile pk is saying which ROW of the table to go to {% endcomment %}
+                    
+
                     </div>
 
 

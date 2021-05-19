@@ -1,9 +1,15 @@
-*{
+
+
+* {
+    font-family: 'IBM Plex Sans', sans-serif;
     box-sizing: border-box;
     padding: none;
     margin: none;
     /* background-color: rgb(234, 236, 233); */
 
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
 }
 
 input {
@@ -16,7 +22,12 @@ body {
     color: #495057;
 }
 
-a, a:hover {
+.btn {
+    font-weight: 500;
+}
+
+
+a {
     text-decoration: none;
     color: rgb(234, 236, 233);
     font-weight:500;
@@ -28,7 +39,19 @@ a:hover {
 
 
 span {
-    color: #495057;
+    /* color: #495057; */
+    color: #abc0d4;
+}
+
+li {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+label {
+    font-size: 25px;
+    font-weight: 900;
 }
 
 .navbar {
@@ -46,37 +69,89 @@ span {
 }
 
 .nav-link {
+    font-family: 'Oxygen', sans-serif;
     font-size: 16px;
     font-weight: 500;
     margin-left: 45px;
     letter-spacing: 2px;
 }
 
+.nav-link:hover {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
 .login {
     margin-right: 30px;
 }
+
+/* Hides helptext in login modal */
+    .helptext {
+        visibility:hidden;
+    }
 
 .logout {
     margin-right: 30px;
 
 }
 
+/* .modal-content {  
+    border: 2px rgb(56, 87, 112); 
+    border-radius: 50px; 
+} */ 
+
+.modal-content  {
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 25px;
+        border: 2px rgb(56, 87, 112);
+}
+
+
+.modal-body {
+    background-color: rgb(234, 236, 233);
+    border: 0px;
+}
 
 .modal-header {
     background-color: rgb(56, 87, 112);
+    border-radius: 25px 25px 0 0;
 }
 
 .modal-title {
     color: #f3d48b;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.modal-footer {
+    background-color: rgb(234, 236, 233);
+    border-radius: 0 0 25px 25px;
+}
+
+.btn_close-modal, .btn_submit {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-right: 25px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.btn_close-modal:hover, .btn_submit:hover {
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin-right: 25px;
 }
 
 .btn_close-modal {
+    font-family: 'Oxygen', sans-serif;
     background-color: #495057;
     color: whitesmoke;
-
 }
 
 .btn_submit {
+    font-family: 'Oxygen', sans-serif;
     background-color: rgb(56, 87, 112);
     color:#f3d48b;
 }
@@ -97,7 +172,13 @@ span {
 }
 
 h4 {
+    font-family: 'Oxygen', sans-serif;
     font-weight: 400;
+}
+
+#h4_wayfarer {
+    font-size: 31px;
+    font-weight: 600;
 }
 
 
@@ -108,6 +189,9 @@ h4 {
     width: 80%;
     background-color: rgb(225, 227, 233);
     border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .div_about-textarea {
@@ -122,7 +206,9 @@ h4 {
 }
 
 .section_textarea-header {
-    font-size: 18px
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 13px;
 }
 
 .img_sydney-snow {
@@ -149,16 +235,19 @@ main {
 
 border-radius: 0 25px 0 0;
 }
+
 .p_cities-header {
+    font-family: 'Oxygen', sans-serif;
     margin: 30px 30px 0px 30px;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 14%;
     color: rgb(234, 236, 233);
     letter-spacing: 1.5px;
 }
 
 .a_city-link {
+    font-family: 'Oxygen', sans-serif;
     height: 125px;
     width:85%;
     margin-bottom: 40px;
@@ -195,6 +284,7 @@ border-radius: 0 25px 0 0;
 
 
 .p_city-link {
+    font-family: 'Oxygen', sans-serif;
     font-size: 21px;
     margin-left: 5%;
     margin-top: 11%;
@@ -236,6 +326,7 @@ border-radius: 0 25px 0 0;
 }
 
 .p_member-since {
+    font-family: 'Oxygen', sans-serif;
     font-size: 15px;
     font-weight: 400;
     margin-top: 30px;
@@ -253,6 +344,16 @@ border-radius: 0 25px 0 0;
 .img_user-city {
     width: 90%;
     height: 80%;
+}
+
+.a_edit-profile {
+    margin-left: 20px;
+}
+
+.icon_edit-profile {
+    font-size: 20px;
+    font-weight: 100;
+    color: #62676b;
 }
 
 .div_userposts {
@@ -318,9 +419,31 @@ border-radius: 0 25px 0 0;
 }
 
 .h2_post-detail-title {
-    margin: 15px 50px 25px 50px;
+    margin: 15px 50px 5px 50px;
+}
+
+.h3_post-author {
+    margin-left: 50px;
+    margin-bottom: 10px;
 }
 
 .p_post-detail-body {
+    font-family: 'Oxygen', sans-serif;
     margin: 15px 50px 25px 50px;
 }
+
+h2 {
+    font-family: 'Oxygen', sans-serif;
+}
+
+h5 {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.p_username {
+    font-family: 'Oxygen', sans-serif;
+
+}
+
+
+

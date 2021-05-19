@@ -11,8 +11,8 @@ from django.http import HttpResponse
 
 # forms
 # from .forms import SignUpForm
-from .forms import SignUpForm, UserProfileForm, LogInForm, EditProfileForm
-
+from .forms import SignUpForm, UserProfileForm, LogInForm
+# EditProfileForm
 
 # auth imports
 from django.contrib.auth import authenticate, login
@@ -39,6 +39,7 @@ class Home(TemplateView):
     def post(self, request):
         form = SignUpForm(request.POST)
         profile_form = UserProfileForm(request.POST)
+        context = {"form": form, "profile_form": profile_form}
 
         if form.is_valid() and profile_form.is_valid():
             user = form.save()
@@ -50,27 +51,37 @@ class Home(TemplateView):
             login(request, user)
             return redirect("accounts/profile")
         else:
-            return redirect("home.html")
+
+
+           # else statement does not seem to have any impact
+            return redirect("signup")
 
     def post(self, request):
         log_in = LogInForm(request.POST)
 
         if log_in.is_valid():
             user = log_in.save()
+
             login(request, user)
             return redirect("accounts/profile")
         else:
+
+
+           # else statement does not seem to have any impact
+
             return redirect("home")
+
+
 # This functions but doesn't have extra fields we need, keeping as a backup
 
 
-class Signup(View):
+class Signup(TemplateView):
 
     def get(self, request):
         form = SignUpForm()
         profile_form = UserProfileForm()
         context = {"form": form, "profile_form": profile_form}
-        return render(request, "signup.html", context)
+        return render(request, "registration/signup.html", context)
 
     def post(self, request):
         form = SignUpForm(request.POST)
@@ -86,7 +97,7 @@ class Signup(View):
             login(request, user)
             return redirect("login")
         else:
-            return redirect("signup.html")
+            return redirect("signup")
 
 
 # def showslides(request):
@@ -107,18 +118,26 @@ class PostDetail(DetailView):
     template_name = "post_detail.html"
 
 
+# UpdateView automatically makes a form
+
 class EditProfile(UpdateView):
+    model = UserProfile
+    template_name = "edit_profile.html"
 
-    def get(self, request):
-        edit_form = EditProfileForm()
-        context = {"edit_form": edit_form}
-        return render(request, "edit_profile.html", context)
+    fields = ['current_city']
 
-    def post(self, request):
-        edit_form = EditProfileForm(request.POST)
-        edit_form.save()
+    success_url = "/profile/"
 
-        return redirect("profile")
+    # def get(self, request):
+    #     edit_form = EditProfileForm()
+    #     context = {"edit_form": edit_form}
+    #     return render(request, "edit_profile.html", context)
+
+    # def post(self, request):
+    #     edit_form = EditProfileForm(request.POST)
+    #     edit_form.save()
+
+    #     return redirect("profile")
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
