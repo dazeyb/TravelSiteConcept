@@ -176,6 +176,11 @@ h4 {
     font-weight: 400;
 }
 
+#h4_wayfarer {
+    font-size: 31px;
+    font-weight: 600;
+}
+
 
 .section_textarea {
     padding: 15px;
@@ -184,6 +189,9 @@ h4 {
     width: 80%;
     background-color: rgb(225, 227, 233);
     border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .div_about-textarea {
@@ -198,7 +206,9 @@ h4 {
 }
 
 .section_textarea-header {
-    font-size: 18px
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 13px;
 }
 
 .img_sydney-snow {
